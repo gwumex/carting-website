@@ -6,35 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofri Online Shop</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
+    <link href="/css/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 
+</head>
 <body>
     <div class="container">
         <div class="header">
             <header>
-                <a href="">PofriPeKs Store</a>
+                <a href="index.html">PofriPeKs Store</a>
                 <nav class="menus">
-                    <ul>
+                    <a class="cartBtn" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <i class="fa-sharp fa-solid fa-bars fa-2xl" id="dropDownBtn"></i>
+                    <ul class="menu" id="menu">    
                         <li><a href="">Home</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="">Contact</a></li>
                         <li><a href="">About</a></li>
                     </ul>
-                    <button class="cartBtn">Cart</button>
-
             </header>
         </div>
         <div class="main">
-
-
             <!-- landing page -->
+            
             <div class="landing">
+                <div class="dropDownBox" id="dropDownBox">
+                    <ul class="dropDownMenu" id="dropDownMenu">    
+                        <li><a href="">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
             <div class="gradient">
                 <div class="heading">
                     <h1>We Sell All types of cloths And accessories</h1>
                     <h3>Order For Yours Today</h3>
-                    <button class="shopNowBtn"><a href="#products">SHOW NOW</a></button>
+                    <a href="#products" class="shopNowBtn">SHOW NOW</a>
                 </div>
             </div>
             </div>
@@ -71,6 +79,14 @@
             </div>
         </div>
     </div>
+    <footer >
+        <ul>
+           <ol>Home</ol>
+           <ol>Contact</ol>
+           <ol>About</ol>
+
+        </ul>
+    </footer>
 </body>
 <script src="./scripts.js"></script>
 

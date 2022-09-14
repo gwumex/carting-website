@@ -1,7 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
 html {
     font-size: 12px;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
     * {
@@ -15,16 +20,12 @@ html {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 8px;
-    }
-}
-
 body {
-    margin: 0;
     background-color: black;
     transition:  0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -47,6 +48,7 @@ h3 {
 
 .container {
     width: 100%;
+    position: relative;
 }
 
 header {
@@ -55,7 +57,11 @@ header {
     background-color: black;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 .header {
@@ -73,23 +79,23 @@ header>a,
 }
 
 .menus {
-    margin-right: 2rem;
+
     display: flex;
     flex-direction: row;
 }
 
 .cartBtn {
-    border: 0;
-    color: white;
-    background-color: red;
-    border-radius: 0.5rem;
-    padding: 0 1rem;
+    background-color: white;
+    color: red;
+    padding: 0.5rem;
     cursor: pointer;
+    border-radius: 0.1rem;
 }
 
 .cartBtn:hover {
-    color: red;
-    background-color: white;
+    background-color: transparent;
+    color: white;
+    border: 0.1rem solid rgb(253, 253, 253);
 }
 
 .menus>ul>li {
@@ -103,31 +109,37 @@ header>a,
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
 }
 
 .heading {
     text-align: center;
     padding: 4rem;
     color: white;
-    width: 70%;
     margin: auto;
+    text-align: center;
+    width: 90%;
+    margin: auto;   
 }
 .gradient{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.408), rgba(255, 0, 0, 0.644));
-
+    padding: 2rem;
 }
 
 .shopNowBtn {
     font-size: 2rem;
     border: 0.2rem solid white;
     padding: 1rem 4rem;
-    color: white;
     background-color: black;
     border-radius: 1rem;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     font-weight: 600;
+    display: block;
+    width: fit-content;
+    margin: auto;
 }
 
 .shopNowBtn:hover {
@@ -159,20 +171,22 @@ header>a,
 }
 
 .productImg {
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
     background-color: red;
     margin-bottom: 1rem;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
     border: 0.2rem solid red;
-    padding: 0;
-
+    padding: 0;  
+}
+.cards:hover{
+    transform: scale(1);
 }
 .img{
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;   
 }
 .details{
     font-size: 1.5rem;
@@ -193,4 +207,112 @@ header>a,
     color: white;
     background-color: transparent;
     border: 0.1rem solid white;
+}
+.cart{
+    background-color: aliceblue;
+    border-radius: 1rem;
+}
+.mainCart{
+    padding: 5rem;
+}
+.cart{
+    width: fit-content;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.cartItem{
+    display: flex;
+    margin: 1rem 0;
+    flex-direction: row;
+    align-items: center;
+}
+.cartImgBox{
+    margin: auto 1rem;
+    overflow: hidden;
+    border: 0.1rem solid blanchedalmond;
+}
+.cartImg{
+    height: 10rem;
+    width: 10rem;
+}
+.cartDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.price{
+    display: block;
+    font-size: 2rem;
+    margin: auto 3rem;
+}
+
+.itemName{
+
+}
+.itemLeft{
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    color: red;
+}
+input{
+    color: yellow;
+    background-color: yellow;
+}
+.fa-sharp{
+    color: aliceblue;
+    margin: auto;
+    display: none;
+}
+.divider{
+    width: 100%;
+    height: 1rem;
+    border: 0;
+    background-color: antiquewhite;
+}
+footer{
+    padding: 2rem 6rem;
+    width: 100%;
+    background-color: rgb(29, 24, 24);
+    margin-top: auto;
+
+}
+footer > ul > ol{
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+.dropDownBox{
+    height: fit-content;
+    z-index: 2;
+    position: fixed;
+    background-color: black;
+    margin-top: 4.1rem;
+    width: auto;
+    right: 0;
+    padding: 1rem;
+    display: none;
+    posi
+}
+.dropDownMenu{
+    display: flex;
+    flex-direction: column;
+}
+.dropDownMenu  > li > a{
+    font-size: 2rem;
+    border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .fa-sharp{
+    margin: auto 1rem;
+    display: block;
+    }
 }

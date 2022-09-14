@@ -42,4 +42,21 @@ let products = [
     
 ];
 
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 600px)").matches) {
+        dropDownBox.style.display ="none";
+    } else {
+      return 1;
+    }
+  });
 
+var dropDownBtn = document.getElementById("dropDownBtn");
+var dropDownBox = document.getElementById("dropDownBox");
+
+dropDownBtn.addEventListener("click", function(){
+    if(dropDownBox.style.display === "block"){
+        dropDownBox.style.display = "none"
+    } else{
+        dropDownBox.style.display = "block"
+    }
+});
