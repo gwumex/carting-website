@@ -1,0 +1,196 @@
+html {
+    font-size: 12px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    transition:  0.5s ease;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.header {
+    background-color: brown;
+}
+
+header>a,
+.menus>ul>li>a {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.menus>ul>li>a:hover {
+    color: gray;
+}
+
+.menus {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.cartBtn {
+    border: 0;
+    color: white;
+    background-color: red;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.cartBtn:hover {
+    color: red;
+    background-color: white;
+}
+
+.menus>ul>li {
+    margin: 1rem;
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.landing {
+    background-image: url('/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    text-align: center;
+    padding: 4rem;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+.gradient{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.408), rgba(255, 0, 0, 0.644));
+
+}
+
+.shopNowBtn {
+    font-size: 2rem;
+    border: 0.2rem solid white;
+    padding: 1rem 4rem;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.shopNowBtn:hover {
+    border: 0.2rem solid red;
+    color: red;
+    background-color: white;
+}
+
+.products {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.cards {
+    margin: 1rem calc(10vw/4) ;
+    border-radius: 1rem;
+    height: 20rem;
+    width: 16rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid white;
+}
+
+.productImg {
+    height: 12rem;
+    width: 12rem;
+    background-color: red;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    border: 0.2rem solid red;
+    padding: 0;
+
+}
+.img{
+    height: 12rem;
+    width: 12rem;
+}
+.details{
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-bottom: 0.5rem;
+}
+.addToCart{
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0.2rem 2rem;
+    color: red;
+    background-color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+.addToCart:hover{
+    color: white;
+    background-color: transparent;
+    border: 0.1rem solid white;
+}
