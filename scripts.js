@@ -79,18 +79,62 @@ dropDownBtn.addEventListener("click", function(){
 function displayItems(){
     let productContainer = document.getElementById('productsContainer');
     products.map(product => {
-        productContainer.innerHTML += 
+        productContainer.innerHTML = productContainer.innerHTML +
         `<div class="cards" id="cards">
         <div class="productImg" id="productImg">
         <img src="${product.image}" alt="hd1"class="img" id="img">                       
         </div>
         <span class="details" id="details">${product.name}</span>
-        <button class="addToCart" id="">Cart Item</button>
+        <button class="addToCart" id="addToCart">Cart Item</button>
+        <span>${product.price}</span>
     </div>  `
     })
+}
+//onLoadcart
+function onLoadCartNumbers() {
+    let productNumber = localStorage.getItem('itemsInCart');
+    if( productNumber){
+        document.querySelector('.cartBtn span').textContent = productNumber;
+    }
+
+}
+
+//add items to cart
+function addToCart(){
+    let addToCart = document.querySelectorAll('#addToCart');
+    addToCart.forEach(function(cartBtn){
+        cartBtn.addEventListener('click', () => {
+            addCartNumber(products.forEach);
+        })
+    })
+    //alternative method
+
+    // for(let i=0; i < addToCart.length; i++){
+    //     addToCart[i].addEventListener('click',() => {
+    //         addCartNumber(products[i]);
+    //     })
+    // }
+}
+
+//add number to cart
+
+function addCartNumber(){
+    let productNumber = localStorage.getItem('itemsInCart'); 
+    productNumber = parseInt(productNumber);
+
+   let cartNumber = document.querySelector('.cartBtn span');
+    if(productNumber) {
+        localStorage.setItem('itemsInCart', productNumber + 1)
+        cartNumber.textContent = productNumber + 1;
+    }else{
+        localStorage.setItem('itemsInCart', 1);
+        cartNumber.textContent = productNumber + 1;
+    }
 }
 
 
 
 navBar();
 displayItems();
+onLoadCartNumbers();
+addToCart();
