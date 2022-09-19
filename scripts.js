@@ -112,6 +112,7 @@ function addToCart(){
     for(let i=0; i < addToCarts.length; i++){
         addToCarts[i].addEventListener('click',() => {
             addCartNumber(products[i]);
+            totalCost(products[i]);
         })
     }
 }
@@ -157,6 +158,20 @@ function setItems(product) {
     console.log(product)
     
     sessionStorage.setItem("productsInCart",JSON.stringify(cartItems));
+}
+
+///total cart cost
+function totalCost(product){
+    let cartCost = sessionStorage.getItem('totalCost');
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost);
+
+    if(cartCost != null){
+        cartCost = parseInt(cartCost);
+        sessionStorage.setItem("totalCost", cartCost + product.price);
+    }else{
+        sessionStorage.setItem("totalCost",product.price);
+    }
 }
 
 navBar();
