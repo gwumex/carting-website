@@ -92,7 +92,7 @@ function displayItems(){
 }
 //onLoadcart
 function onLoadCartNumbers() {
-    let productNumber = localStorage.getItem('itemsInCart');
+    let productNumber = sessionStorage.getItem('itemsInCart');
     if( productNumber){
         document.querySelector('.cartBtn span').textContent = productNumber;
     }
@@ -101,38 +101,63 @@ function onLoadCartNumbers() {
 
 //add items to cart
 function addToCart(){
-    let addToCart = document.querySelectorAll('#addToCart');
-    addToCart.forEach(function(cartBtn){
-        cartBtn.addEventListener('click', () => {
-            addCartNumber(products.forEach);
-        })
-    })
+    let addToCarts = document.querySelectorAll('#addToCart');
+    // addToCarts.forEach(function(cartBtn){
+    //     cartBtn.addEventListener('click', () => {
+    //         addCartNumber(products.forEach);            
+    //     })
+    // })
     //alternative method
 
-    // for(let i=0; i < addToCart.length; i++){
-    //     addToCart[i].addEventListener('click',() => {
-    //         addCartNumber(products[i]);
-    //     })
-    // }
+    for(let i=0; i < addToCarts.length; i++){
+        addToCarts[i].addEventListener('click',() => {
+            addCartNumber(products[i]);
+        })
+    }
 }
 
 //add number to cart
 
-function addCartNumber(){
-    let productNumber = localStorage.getItem('itemsInCart'); 
+function addCartNumber(product){
+    let productNumber = sessionStorage.getItem('itemsInCart'); 
     productNumber = parseInt(productNumber);
 
    let cartNumber = document.querySelector('.cartBtn span');
     if(productNumber) {
-        localStorage.setItem('itemsInCart', productNumber + 1)
+        sessionStorage.setItem('itemsInCart', productNumber + 1)
         cartNumber.textContent = productNumber + 1;
     }else{
-        localStorage.setItem('itemsInCart', 1);
+        sessionStorage.setItem('itemsInCart', 1);
         cartNumber.textContent = productNumber + 1;
     }
+    setItems(product);
 }
 
+// add carted items to local storage
+function setItems(product) {
+    let cartItems = sessionStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    
 
+    if (cartItems != null){
+       
+        if(cartItems[product.tag] == undefined){
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+          [product.tag]: product
+       }
+    }
+    console.log(product)
+    
+    sessionStorage.setItem("productsInCart",JSON.stringify(cartItems));
+}
 
 navBar();
 displayItems();
