@@ -219,7 +219,8 @@ function displayCart(){
                 <span class="inCart">${ item.inCart} added to cart</span>
             </div>
             <span class="price">${item.price}$</span>
-            
+            <i class="fa-sharp fa-solid"></i>
+            <i class="fa-sharp fa-solid fa-trash"></i>
 
             </div>
             <div class="divider"></div>

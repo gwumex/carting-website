@@ -5,7 +5,7 @@
     border: 0;
 }
 html {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,14 +36,6 @@ a {
 li {
     list-style: none;
     display: inline;
-}
-
-h1 {
-    font-size: 4 rem;
-}
-
-h3 {
-    font-size: 3rem;
 }
 
 .container {
@@ -131,7 +123,6 @@ header>a,
 
 .shopNowBtn {
     font-size: 2rem;
-    border: 0.2rem solid white;
     padding: 1rem 4rem;
     background-color: black;
     border-radius: 1rem;
@@ -144,8 +135,7 @@ header>a,
 }
 
 .shopNowBtn:hover {
-    border: 0.2rem solid red;
-    color: red;
+    color:black;
     background-color: white;
 }
 
@@ -228,6 +218,7 @@ header>a,
     margin: 1rem 0;
     flex-direction: row;
     align-items: center;
+    width: fit-content;
 }
 .cartImgBox{
     margin: auto 1rem;
@@ -247,7 +238,7 @@ header>a,
 .price{
     display: block;
     font-size: 2rem;
-    margin: auto 3rem;
+    margin:  3rem 0 3rem 3rem;
 }
 
 .inCart{
@@ -264,7 +255,7 @@ input{
     color: yellow;
     background-color: yellow;
 }
-.fa-sharp{
+#dropDown{
     color: aliceblue;
     margin: auto;
     display: none;
@@ -310,18 +301,7 @@ footer > ul > ol{
     border-bottom: 1px solid white;
 }
 
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 10px;
-    }
-    .menu{
-        display: none;
-    }
-    .fa-sharp{
-    margin: auto 1rem;
-    display: block;
-    }
-}
+
 
 .cartIsEmpty{
     color: red;
@@ -356,4 +336,37 @@ footer > ul > ol{
 }
 .total{
     color: red;
+}
+.fa-trash{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.fa-trash:hover{
+    color: red;
+}
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 8px;
+    }
+    .menu{
+        display: none;
+    }
+    .fa-sharp{
+    margin: auto 1rem;
+    display: block;
+    }
+    .cartItem{
+        display: flex;
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .price{
+        display: block;
+        font-size: 2rem;
+        margin:  auto;
+    }
+
 }
