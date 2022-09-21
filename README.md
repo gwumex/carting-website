@@ -15,7 +15,7 @@
 <p># Add content to the product list by adding new <i>Object</i> to the array <strong>Products</strong> in the <strong>Main.js</strong>, also add the corresponding product image to the image folder</p>
 </ul>
 
-<span><h2><strong>#Comments and observations are welcome</strong></h2>
+<span><h2><strong>#Comments and observations are welcomed</strong></h2>
 :heart::heart: :heart: :heart::heart: :heart:</span>
 
 <h2><strong>#In Progress</strong></h2>
