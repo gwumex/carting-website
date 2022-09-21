@@ -25,8 +25,9 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: aliceblue;
 }
+
 
 li {
     list-style: none;
@@ -331,6 +332,7 @@ footer > ul > ol{
     font-size: 1.5rem;
     text-align: center;
     display: flex;
+    flex-direction: column;
 }
 .proceedBtn{
     color: aliceblue;
@@ -355,6 +357,17 @@ footer > ul > ol{
 }
 .fa-trash:hover{
     color: red;
+}
+#clearcart{
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: red;
+    float: right;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+.clear-container{
+    display: block;
 }
 @media only screen and (max-width: 600px) {
     html {
