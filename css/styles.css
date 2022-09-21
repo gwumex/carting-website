@@ -102,6 +102,7 @@ header>a,
     margin: auto;
     display: none;
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 .landing {
@@ -300,6 +301,11 @@ footer{
 }
 footer > ul > ol{
     font-size: 1.5rem;
+    color: gray;
+    cursor: pointer;
+}
+footer > ul > ol:hover{
+    
     color: aliceblue;
 }
 .dropDownBox{
@@ -322,6 +328,10 @@ footer > ul > ol{
     font-size: 2rem;
     border-bottom: 1px solid white;
 }
+.dropDownMenu  > li > a:hover{
+    color: gray;
+}
+
 .cartIsEmpty{
     color: red;
     font-size: 2rem;
