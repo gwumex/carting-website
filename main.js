@@ -56,6 +56,44 @@ let products = [
         price: 700,
         inCart: 0,
         inStock: 18
+    },
+    {
+        id: '6',
+        name: 'Green Hoodie',
+        tag: 'greenhoodie',
+        image: "./images/hd1.jpg",
+        price: 300,
+        inCart: 0,
+        inStock: 7
+    },
+    {
+        id: '7',
+        name: 'Black Hoodie',
+        tag: 'blackhoodie',
+        image: "./images/hd2.jpg",
+        price: 790,
+        inCart: 0,
+        inStock: 12
+    },
+
+    {
+        id: '8',
+        name: 'Orange Hoodie',
+        tag: 'orangehoodie',
+        image: "./images/hd3.jpg",
+        price: 776,
+        inCart: 0,
+        inStock: 13
+    },
+
+    {
+        id: '9',
+        name: 'Green-o Hoodie',
+        tag: 'green-ohoodie',
+        image: "./images/hd4.jpg",
+        price: 890,
+        inCart: 0,
+        inStock: 14
     }
 
 ];
@@ -94,7 +132,7 @@ function displayItems() {
         </div>
         <span class="details" id="details">${product.name}</span>
         <button class="addToCart" id="addToCart">Cart Item</button>
-        <span>${product.price}</span>
+        <span class="item-price">$${product.price}</span>
     </div>  `
     })
 }

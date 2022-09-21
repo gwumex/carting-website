@@ -211,6 +211,11 @@ header>a,
     color: aliceblue;
     margin-bottom: 0.5rem;
 }
+.item-price{
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
 .addToCart{
     border: 0;
     font-size: 1.5rem;
@@ -411,12 +416,6 @@ footer > ul > ol:hover{
         flex-direction: row;
         align-content: space-around;
         align-items: center;
-    }
-    .price{
-        display: block;
-        font-size: 1.5rem;
-        margin:  auto;
-        margin-left: 1rem;
     }
     .cartImgBox{
         margin: auto 1rem;
