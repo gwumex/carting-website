@@ -334,6 +334,7 @@ footer > ul > ol{
     display: flex;
     flex-direction: column;
 }
+
 .proceedBtn{
     color: aliceblue;
     background-color: green;
@@ -350,6 +351,8 @@ footer > ul > ol{
 }
 .total{
     color: red;
+    margin-left: 1em;
+
 }
 .fa-trash{
     margin-left: 1rem;
@@ -358,7 +361,7 @@ footer > ul > ol{
 .fa-trash:hover{
     color: red;
 }
-#clearcart{
+.clearcart{
     text-decoration: underline;
     font-size: 1.5rem;
     color: red;
@@ -368,6 +371,12 @@ footer > ul > ol{
 }
 .clear-container{
     display: block;
+}
+
+.nothing-in-cart{
+    padding: 1rem;
+    margin: 10rem;
+    background-color: aliceblue;
 }
 @media only screen and (max-width: 600px) {
     html {

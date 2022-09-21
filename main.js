@@ -80,6 +80,8 @@ function navBar() {
         }
     });
 }
+
+
 //display items
 
 function displayItems() {
@@ -220,7 +222,7 @@ function displayCart() {
             </div>
             <span class="price">${item.price}$</span>
             <i class="fa-sharp fa-solid"></i>
-            <i class="fa-sharp fa-solid fa-trash " id="delItem" ></i>
+            <i class="fa-sharp fa-solid fa-trash" id="delItem" onclick="clearCart()"></i>
             </div>
             <div class="divider"></div>
         `
@@ -231,15 +233,17 @@ function displayCart() {
 
     }
 }
-
+//delete items in cart
 function deleteCartItems(){
     localStorage.removeItem('productsInCart');
 }
+
 
 //clear cart function
 function clearCart(){
     localStorage.clear();
 }
+
 
 displayCart();
 displayTotalCost();
