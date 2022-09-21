@@ -158,7 +158,13 @@ header>a,
     color:black;
     background-color: white;
 }
-
+.product-header{
+    color: aliceblue;
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 1rem;
+    letter-spacing: 1rem;
+}
 .products {
     margin: 1rem;
     display: flex;
